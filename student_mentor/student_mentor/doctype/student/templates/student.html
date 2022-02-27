@@ -1,0 +1,21 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-20 row">
+    <div class="col-sm-2">
+        <img alt="{{ title }}" src="{{ image }}">
+    </div>
+
+    <div class="col">
+        <div><strong>Roll No: </strong>{{roll_no}}</div>
+        <div><strong>First Name: </strong>{{first_name}}</div>
+        <div><strong>Last Name: </strong>{{last_name}}</div>
+        <div><strong>Email: </strong>{{email}}</div>
+        <div><strong>Phone No: </strong>{{phone}}</div>
+        <div><strong>Mentor Name: </strong>{{parent}}</div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

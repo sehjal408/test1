@@ -1,0 +1,30 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h2>Mentor Name: {{ doc.full_name }}</h2>
+<h3>Students List:-</h3>
+<div>
+<table class="table table-condensed table-hover table-bordered">
+<tr>
+<th class="text-center">Roll No</th>
+<th class="text-center">First Name</th>
+<th class="text-center">Last Name</th>
+<th class="text-center">Email</th>
+<th class="text-center">Phone</th>
+<tr>
+
+{% for item in doc.students | sort(attribute='roll_no') %}
+
+<tr>
+<td style="width:10%; text-align:center;">{{item.roll_no}}</td>
+<td style="width:10%; text-align:center;">{{item.first_name}}</td>
+<td style="width:10%; text-align:center;">{{item.last_name}}</td>
+<td style="width:10%; text-align:center;">{{item.email}}</td>
+<td style="width:10%; text-align:center;">{{item.phone}}</td>
+</tr>
+
+{% endfor %}
+</table>
+{% endblock %}
+</div>
+<!-- this is a sample default web page template -->
